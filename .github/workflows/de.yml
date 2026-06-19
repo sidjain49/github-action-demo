@@ -32,7 +32,7 @@ jobs:
 
   
       - name: Run a multi-line script
-        run: |hello sujit bhai
+        run: "hello sujit bhai!"
 
         
          
