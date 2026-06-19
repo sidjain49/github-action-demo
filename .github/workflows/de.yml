@@ -1,25 +1,28 @@
 
 
-name: CI
-on:
+name: Terraform CI/CD
+on:  
   
-  push:
-    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
-
-  workflow_dispatch:
-
+  push: 
+    branches: 
+      - main
+  
 
 jobs:
 
-  build:
-   
+  terraform_scan:
+    name: terraform_scan
     runs-on: ubuntu-latest
 
-   
     steps:
+      -  uses: actions/checkout@v7.0.0
+
+      -  uses: hashicorp/setup-terraform@v2.0.3
+  
+
+ 
    
       - uses: actions/checkout@v4
 
@@ -29,6 +32,7 @@ jobs:
 
   
       - name: Run a multi-line script
-        run: |
+        run: |hello sujit bhai
+
         
          
